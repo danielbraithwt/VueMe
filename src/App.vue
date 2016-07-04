@@ -1,24 +1,29 @@
 <template>
   <div id="app">
     <header-section></header-section>
+    <about-section></about-section>
+    <project-section></project-section>
   </div>
 </template>
 
 <script>
 import HeaderSection from './components/HeaderSection.vue';
+import AboutSection from './components/AboutSection.vue';
+import ProjectSection from './components/ProjectSection.vue';
 
 export default {
   name: 'app',
   components: {
-    HeaderSection
+    HeaderSection,
+    AboutSection,
+    ProjectSection
   }
 }
 </script>
 
 <style>
 .Fill {
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .Container {
