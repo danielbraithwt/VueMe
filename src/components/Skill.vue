@@ -15,8 +15,11 @@ export default {
 
 <style>
 .Skill {
+  display: flex;
   background-color: lightgrey;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .Skill-text {
