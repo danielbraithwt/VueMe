@@ -1,15 +1,11 @@
 <template>
   <div class="Social">
-    <div class="Social-icon">
-
+    <div class="Social-icon Icon">
+      <img class="Social-icon-image" src="../assets/mark-github.svg" />
     </div>
 
-    <div class="Social-icon">
-
-    </div>
-
-    <div class="Social-icon">
-
+    <div class="Social-icon Icon">
+      <img class="Social-icon-image" src="../assets/mail.svg" />
     </div>
   </div>
 </template>
@@ -24,18 +20,19 @@ export default {
 .Social {
   width: 100%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .Social-icon {
-  width: 50px;
-  height: 50px;
-
-  border-radius: 50%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: lightgrey;
+}
 
-  margin: 10px;
+.Social-icon-image {
+  width: 50%;
+  height: 50%;
 }
 </style>

@@ -23,7 +23,16 @@ export default {
 
 <style>
 .Fill {
+  height: 100%;
+  width: 100%;
+}
+
+.Fill--height {
   min-height: 100vh;
+}
+
+.Fill--width {
+  width: 100%;
 }
 
 .Container {
@@ -32,11 +41,14 @@ export default {
   margin-right: 2%;
 }
 
-.h1--responsive {
-  font-size: 5vw;
-}
+.u-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
 
-.p {
-
+  background-color: #2196F3;
 }
 </style>
