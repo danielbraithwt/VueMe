@@ -1,13 +1,12 @@
 <template>
-  <div class="u-background">
-
-  </div>
-
-    <div class="Container row Fill--height">
-      <div class="col-xs-12 middle-xs center-xs u-flex u-flexWrap u-flexRow">
-        <div class="col-xs-12 center-xs middle-xs u-flex u-flexWrap">
-          <img class="Profile-Icon" src="../assets/profile-photo.jpg" />
-          <h1 class="Profile-Text Fill--width">Daniel Braithwaite</h1>
+    <div class="Fill--height Fill--width u-background">
+      <div class="Container">
+          <div class="Fill--height middle-xs center-xs row">
+            <div class="col-xs-12">
+              <img class="Profile-Icon" src="../assets/profile-photo.jpg" />
+              <h1 class="Profile-Text mFill--width">Daniel Braithwaite</h1>
+            </div>
+          </div>
         </div>
       </div>
     </div>

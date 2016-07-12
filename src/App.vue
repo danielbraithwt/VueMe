@@ -22,6 +22,17 @@ export default {
 </script>
 
 <style>
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .Fill {
   height: 100%;
   width: 100%;
@@ -32,7 +43,7 @@ export default {
 }
 
 .Fill--width {
-  width: 100%;
+  width: 100vw;
 }
 
 .Container {
@@ -42,12 +53,12 @@ export default {
 }
 
 .u-background {
-  width: 100%;
+  /*width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -2;
+  z-index: -2;*/
 
   background-color: #2196F3;
 }
