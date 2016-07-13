@@ -9,8 +9,16 @@
     <script>
     // Using vh is not a good solution as on mobile can cause jumping
     // so temparly use vh on site load and then change height to px using js
+    var width = -1;
     var resizeDivs = function() {
-      var height = window.screen.availHeight;
+      // Only want to rezise everything if the width has changed
+      // stops div sizes being changed when the scroll bar dissapears on mobile
+      if (width === window.innerWidth) {
+        return;
+      }
+      
+      width = window.innerWidth;
+      var height = window.innerHeight;
       var divs = document.getElementsByClassName('Fill--height');
 
       for (var i = 0; i < divs.length; i++) {
