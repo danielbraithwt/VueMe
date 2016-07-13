@@ -9,11 +9,11 @@
         <h1>Name</h1>
       </div>
 
-      <div class="Project-skills col-xs-12">
+      <!-- <div class="Project-skills col-xs-12">
         <skill name="Git" color="brown"></skill>
         <skill name="SASS" color="pink"></skill>
         <skill name="Vue" color="green"></skill>
-      </div>
+      </div> -->
 
       <div class="Project-link col-xs-12">
         <img class="Project-link-icon" src="../assets/browser.svg" /> <a class="Project-link-text" href="#">http://www.website.com</a>
