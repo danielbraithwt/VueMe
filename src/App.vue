@@ -63,6 +63,14 @@ body {
   background-color: #2196F3;
 }
 
+.u-title {
+  font-size: 10vw;
+}
+
+.u-textWhite {
+  color: white;
+}
+
 .u-mB-sm {
   margin-bottom: 10px;
 }

@@ -3,8 +3,8 @@
 <div class="Fill--height u-background">
   <div class="Container">
     <div class="row">
-      <div class="col-xs-12">
-        <h1>Projects</h1>
+      <div class="col-xs-12 u-flex u-flexJustifyContentCenter">
+        <h1 class="u-title u-textWhite">Projects</h1>
       </div>
 
       <div class="col-xs-12">
