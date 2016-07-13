@@ -10,7 +10,7 @@
     // Using vh is not a good solution as on mobile can cause jumping
     // so temparly use vh on site load and then change height to px using js
     var resizeDivs = function() {
-      var height = window.innerHeight;
+      var height = window.screen.availHeight;
       var divs = document.getElementsByClassName('Fill--height');
 
       for (var i = 0; i < divs.length; i++) {
