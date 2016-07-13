@@ -62,4 +62,16 @@ body {
 
   background-color: #2196F3;
 }
+
+.u-mB-sm {
+  margin-bottom: 10px;
+}
+
+.u-mB-md {
+  margin-bottom: 15px;
+}
+
+.u-mB-lg {
+  margin-bottom: 20px;
+}
 </style>
