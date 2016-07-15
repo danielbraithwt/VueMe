@@ -7,7 +7,7 @@
         <h1 class="u-title u-textWhite">Projects</h1>
       </div>
 
-      <div class="col-xs-12">
+      <div class="col-xs-12 u-flex u-flexRow u-flexWrap">
         <project></project>
         <project></project>
         <project></project>
