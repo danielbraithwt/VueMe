@@ -3,7 +3,7 @@
       <div class="Container">
           <div class="Fill--height middle-xs center-xs row">
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-              <img class="Profile-Icon" src="../assets/profile-photo.jpg" />
+              <img class="Profile-Icon" v-bind:src="photo" />
               <h1 class="Profile-Text mFill--width">{{ name }}</h1>
             </div>
           </div>

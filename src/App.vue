@@ -21,18 +21,18 @@ export default {
   data: function() {
     return {
       name: "Daniel Braithwaite",
-      photo: "../assets/profile-photo.jpg",
+      photo: "../../static/profile-photo.jpg",
       social: [
         {
-          icon: '../assets/mark-github.svg',
+          icon: '../../static/mark-github.svg',
           url: '#',
         },
         {
-          icon: '../assets/mail.svg',
+          icon: '../../static/mail.svg',
           url: '#',
         },
         {
-          icon: '../assets/file.svg',
+          icon: '../../static/file.svg',
           url: '#',
         }
       ],

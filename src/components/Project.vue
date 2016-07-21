@@ -11,11 +11,11 @@
         </div>
 
         <div class="Project-link col-xs-12 u-p-0">
-          <img class="Project-link-icon" src="../assets/browser.svg" /> <a class="Project-link-text" v-bind:href="project.url">{{ project.url }}</a>
+          <img class="Project-link-icon" src="../../static/browser.svg" /> <a class="Project-link-text" v-bind:href="project.url">{{ project.url }}</a>
         </div>
 
         <div class="Project-link col-xs-12 u-mB-lg u-p-0">
-          <img class="Project-link-icon" src="../assets/mark-github.svg" /> <a class="Project-link-text" v-bind:href="project.git">{{ project.git }}</a>
+          <img class="Project-link-icon" src="../../static/mark-github.svg" /> <a class="Project-link-text" v-bind:href="project.git">{{ project.git }}</a>
         </div>
 
         <div v-bind:class="{ 'Project-description--show':expanded }" class="Project-description col-xs-12 u-p-0">
@@ -24,7 +24,7 @@
 
         <div class="col-xs-12 center-xs u-flex u-p-0 u-sm-hidden">
           <div v-on:click="toggleExpanded" v-bind:class="{ 'Projefct-expand--expanded':expanded }" class="Project-expand">
-            <img src="../assets/chevron-down.svg" />
+            <img src="../../static/chevron-down.svg" />
           </div>
         </div>
       </div>
