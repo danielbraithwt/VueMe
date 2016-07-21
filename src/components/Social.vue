@@ -1,18 +1,17 @@
 <template>
   <div class="Social">
-    <div class="Social-icon Icon">
-      <img class="Social-icon-image" src="../assets/mark-github.svg" />
-    </div>
-
-    <div class="Social-icon Icon">
-      <img class="Social-icon-image" src="../assets/mail.svg" />
-    </div>
+    <template v-for="item in social">
+      <div class="Social-icon Icon">
+        <img class="Social-icon-image" v-bind:src="item.icon" />
+      </div>
+    </template>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'social'
+  name: 'social',
+  props: ['social']
 }
 </script>
 

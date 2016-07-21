@@ -1,31 +1,25 @@
 <template>
   <div class="col-xs-12 col-sm-6 col-md-4">
-    <div class="Project">
+    <div class="Project Card">
       <div class="u-flex u-flexRow u-flexWrap">
         <div class="col-xs-12 u-p-0">
-          <img class="Project-image" src="http://placehold.it/500x250" />
+          <img class="Project-image" v-bind:src="project.image" />
         </div>
 
         <div class="Project-name col-xs-12 u-p-0">
-          <h1>Name</h1>
+          <h1>{{ project.name }}</h1>
         </div>
 
-        <!-- <div class="Project-skills col-xs-12">
-          <skill name="Git" color="brown"></skill>
-          <skill name="SASS" color="pink"></skill>
-          <skill name="Vue" color="green"></skill>
-        </div> -->
-
         <div class="Project-link col-xs-12 u-p-0">
-          <img class="Project-link-icon" src="../assets/browser.svg" /> <a class="Project-link-text" href="#">http://www.website.com</a>
+          <img class="Project-link-icon" src="../assets/browser.svg" /> <a class="Project-link-text" v-bind:href="project.url">{{ project.url }}</a>
         </div>
 
         <div class="Project-link col-xs-12 u-mB-lg u-p-0">
-          <img class="Project-link-icon" src="../assets/mark-github.svg" /> <a class="Project-link-text" href="#">https://github.com/danielbraithwt</a>
+          <img class="Project-link-icon" src="../assets/mark-github.svg" /> <a class="Project-link-text" v-bind:href="project.git">{{ project.git }}</a>
         </div>
 
         <div v-bind:class="{ 'Project-description--show':expanded }" class="Project-description col-xs-12 u-p-0">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>{{ project.description }}</p>
         </div>
 
         <div class="col-xs-12 center-xs u-flex u-p-0 u-sm-hidden">
@@ -43,6 +37,7 @@ import Skill from './Skill.vue';
 
 export default {
   name: 'project',
+  props: ['project'],
   components: [Skill],
   data: function() {
     return {
@@ -59,19 +54,7 @@ export default {
 
 <style>
 .Project {
-  height: auto;
 
-  padding-bottom: 20px;
-
-  /*margin-top: 40px;*/
-  margin-bottom: 40px;
-  /*padding: 40px;*/
-
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-
-  border-radius: 2px;
-
-  background-color: white;
 }
 
 .Project-expand {

@@ -2,9 +2,9 @@
     <div class="Fill--height Fill--width u-background">
       <div class="Container">
           <div class="Fill--height middle-xs center-xs row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
               <img class="Profile-Icon" src="../assets/profile-photo.jpg" />
-              <h1 class="Profile-Text mFill--width">Daniel Braithwaite</h1>
+              <h1 class="Profile-Text mFill--width">{{ name }}</h1>
             </div>
           </div>
         </div>
@@ -14,7 +14,7 @@
     <div class="row Fill--height u-overlay">
       <div class="col-xs-12 bottom-xs center-xs u-flex u-flexWrap u-flexRow">
         <div class="col-xs-12 bottom-xs u-flex u-flexWrap">
-          <social></social>
+          <social :social="social"></social>
         </div>
       </div>
     </div>
@@ -26,6 +26,7 @@ import Social from './Social.vue';
 
 export default {
   name: 'header-section',
+  props: ['name', 'photo', 'social'],
   components: {
     Social
   }
@@ -66,7 +67,7 @@ export default {
 }
 
 .Profile-Text {
-  font-size: 10vw;
+  /*font-size: 10vw;*/
   color: white;
 }
 
@@ -78,7 +79,7 @@ export default {
     height: 50px;
 }
 
-@media (min-width: 950px) {.Icon {
+/*@media (min-width: 950px) {.Icon {
     width: 100px;
     height: 100px;
 }}
@@ -86,5 +87,5 @@ export default {
 @media (min-width: 1500px) {.Icon {
     width: 150px;
     height: 150px;
-}}
+}}*/
 </style>

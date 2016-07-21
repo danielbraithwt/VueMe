@@ -8,9 +8,7 @@
       </div>
 
       <div class="col-xs-12 u-flex u-flexRow u-flexWrap">
-        <project></project>
-        <project></project>
-        <project></project>
+        <project v-for="project in projects" :project="project"></project>
       </div>
     </div>
   </div>
@@ -22,6 +20,7 @@ import Project from './Project.vue';
 
 export default {
   name: 'project-section',
+  props: ['projects'],
   components: {
     Project
   }
@@ -29,5 +28,4 @@ export default {
 </script>
 
 <style>
-
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <header-section></header-section>
-    <about-section></about-section>
-    <project-section></project-section>
+    <header-section :name="name" :photo="photo" :social="social"></header-section>
+    <about-section :about="about"></about-section>
+    <project-section :projects="projects"></project-section>
   </div>
 </template>
 
@@ -17,6 +17,66 @@ export default {
     HeaderSection,
     AboutSection,
     ProjectSection
+  },
+  data: function() {
+    return {
+      name: "Daniel Braithwaite",
+      photo: "../assets/profile-photo.jpg",
+      social: [
+        {
+          icon: '../assets/mark-github.svg',
+          url: '#',
+        },
+        {
+          icon: '../assets/mail.svg',
+          url: '#',
+        },
+        {
+          icon: '../assets/file.svg',
+          url: '#',
+        }
+      ],
+      about: {
+        aboutme: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        experence: {
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          skills: [
+            {
+              name: 'JS',
+              color: 'yellow'
+            },
+            {
+              name: 'Ember',
+              color: 'amber'
+            }
+          ]
+        },
+        quallifications: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      },
+      projects: [
+        {
+          image: 'http://placehold.it/500x250',
+          name: 'Name',
+          url: 'http://website.com',
+          git: 'https://github.com/danielbraithwt',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        },
+        {
+          image: 'http://placehold.it/500x250',
+          name: 'Name',
+          url: 'http://website.com',
+          git: 'https://github.com/danielbraithwt',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        },
+        {
+          image: 'http://placehold.it/500x250',
+          name: 'Name',
+          url: 'http://website.com',
+          git: 'https://github.com/danielbraithwt',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        }
+      ]
+    }
   }
 }
 </script>
@@ -26,11 +86,26 @@ html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background-color: #F9F9F9;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+.Card {
+  height: auto;
+  padding-bottom: 20px;
+
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+  background-color: white;
 }
 
 .Fill {
@@ -64,11 +139,15 @@ body {
 }
 
 .u-title {
-  font-size: 10vw;
+  /*font-size: 6vw;*/
 }
 
 .u-textWhite {
   color: white;
+}
+
+.u-p-0 {
+  padding: 0;
 }
 
 .u-mB-sm {
@@ -82,4 +161,21 @@ body {
 .u-mB-lg {
   margin-bottom: 20px;
 }
+
+@media (min-width: 767px) {.u-sm-hidden {
+    display: none !important;
+}}
+
+@media (min-width: 767px) {.u-sm-show {
+    display: block !important;
+}}
+
+.u-sm-mh-0 {
+  /*background-color: green;*/
+}
+
+/*@media (min-wdith: 767px) {.u-sm-mh-0 {
+  background-color: green;
+  min-height: 0px !important;
+}}*/
 </style>
