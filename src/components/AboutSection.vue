@@ -2,61 +2,37 @@
 <div class="Fill--height">
   <div class="Container">
     <div class="row">
-      <div class="col-xs-12 u-flex u-flexJustifyContentCenter">
-        <h1>Me</h1>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 u-flex">
-        <div class="Card">
-          <div class="col-xs-12 u-flex u-flexJustifyContentCenter">
-            <h1 class="Section-header u-title">About Me</h1>
-          </div>
-          <div class="col-xs-12">
-            <p>{{ about.aboutme }}</p>
-          </div>
-        </div>
-      </div>
+      <info-card :icon="about.aboutme.icon">
+        <p slot="main">{{ about.aboutme.text }}</p>
+      </info-card>
 
-      <div class="col-xs-12 col-sm-6 col-md-4 u-flex">
-        <div class="Card">
-          <div class="col-xs-12 u-flex u-flexJustifyContentCenter">
-            <h1 class="Section-header u-title">Experence</h1>
-          </div>
-          <div class="col-xs-12">
-            <p>{{ about.experence.text }}</p>
-          </div>
-          <div class="col-xs-12">
-            <div class="Skills row">
-              <skill v-for="skill in about.experence.skills"
-                      :name="skill.name" :color="skill.color"></skill>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-xs-12 col-sm-6 col-md-4 u-flex">
-        <div class="Card">
-          <div class="col-xs-12 u-flex u-flexJustifyContentCenter">
-            <h1 class="Section-header u-title">Quallifications</h1>
-          </div>
-          <div class="col-xs-12">
-            <p>{{ about.quallifications }}</p>
-          </div>
+      <info-card :icon="about.experence.icon">
+        <p slot="main">{{ about.experence.text }}</p>
+        <div slot="bottom" class="Skills row">
+          <skill v-for="skill in about.experence.skills"
+                  :name="skill.name" :color="skill.color"></skill>
         </div>
+      </info-card>
 
-        </div>
+      <info-card :icon="about.quallifications.icon">
+        <p slot="main">{{ about.quallifications.text }}</p>
+      </info-card>
     </div>
   </div>
 </div>
 </template>
 
 <script>
+import InfoCard from './InfoCard.vue'
 import Skill from './Skill.vue';
 
 export default {
   name: 'about-section',
   props: ['about'],
   components: {
-    Skill
+    Skill,
+    InfoCard
   }
 }
 </script>
