@@ -3,13 +3,17 @@
   <div class="Container">
     <div class="row">
       <card :image="about.aboutme.image">
-        <h1 slot="top">About Me</h1>
+        <h1 slot="top" class="Section-title">About Me</h1>
+        <p slot="top" class="Section-subtitle">Subtitle</p>
+
         <p slot="bottom">{{ about.aboutme.text }}</p>
       </card>
 
 
       <card :image="about.experence.image">
-        <h1 slot="top">Experence</h1>
+        <h1 slot="top" class="Section-title">Experence</h1>
+        <p slot="top" class="Section-subtitle">Subtitle</p>
+
         <p slot="bottom">{{ about.experence.text }}</p>
         <div slot="bottom" class="Skills row">
           <skill v-for="skill in about.experence.skills"
@@ -18,7 +22,9 @@
       </card>
 
       <card :image="about.quallifications.image">
-        <h1 slot="top">Quallifications</h1>
+        <h1 slot="top" class="Section-title">Quallifications</h1>
+        <p slot="top" class="Section-subtitle">Subtitle</p>
+
         <p slot="bottom">{{ about.quallifications.text }}</p>
       </card>
     </div>
@@ -46,8 +52,15 @@ export default {
   flex-wrap: wrap;
 }
 
-.Section-header {
+.Section-title {
+  padding-left: 20px;
   margin-bottom: 0;
+}
+
+.Section-subtitle {
+  padding-left: 20px;
+
+  color: #757575;
 }
 
 /*@media (min-wdith: 767px) {.u-sm-mh-0 {
