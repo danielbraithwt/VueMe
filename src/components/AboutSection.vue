@@ -2,29 +2,32 @@
 <div class="Fill--height">
   <div class="Container">
     <div class="row">
-      <info-card :icon="about.aboutme.icon">
-        <p slot="main">{{ about.aboutme.text }}</p>
-      </info-card>
+      <card :image="about.aboutme.image">
+        <h1 slot="top">About Me</h1>
+        <p slot="bottom">{{ about.aboutme.text }}</p>
+      </card>
 
 
-      <info-card :icon="about.experence.icon">
-        <p slot="main">{{ about.experence.text }}</p>
+      <card :image="about.experence.image">
+        <h1 slot="top">Experence</h1>
+        <p slot="bottom">{{ about.experence.text }}</p>
         <div slot="bottom" class="Skills row">
           <skill v-for="skill in about.experence.skills"
                   :name="skill.name" :color="skill.color"></skill>
         </div>
-      </info-card>
+      </card>
 
-      <info-card :icon="about.quallifications.icon">
-        <p slot="main">{{ about.quallifications.text }}</p>
-      </info-card>
+      <card :image="about.quallifications.image">
+        <h1 slot="top">Quallifications</h1>
+        <p slot="bottom">{{ about.quallifications.text }}</p>
+      </card>
     </div>
   </div>
 </div>
 </template>
 
 <script>
-import InfoCard from './InfoCard.vue'
+import Card from './Card.vue'
 import Skill from './Skill.vue';
 
 export default {
@@ -32,7 +35,7 @@ export default {
   props: ['about'],
   components: {
     Skill,
-    InfoCard
+    Card
   }
 }
 </script>
