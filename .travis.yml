@@ -3,13 +3,12 @@ node_js: "6"
 
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
-    pwd
     cd "$TRAVIS_BUILD_DIR"
-    pwd
     npm run build
     cd dist
     git clone https://danielbraithwt:$GITHUB_API_KEY@github.com/danielbraithwt/danielbraithwt.github.io.git
-    rm -rfv danielbraithwt.github.io/*
+    rm -rf danielbraithwt.github.io/static/
+    rm danielbraithwt.github.io/index.html
     cp index.html danielbraithwt.github.io/
     cp -r static danielbraithwt.github.io/
     cd danielbraithwt.github.io
