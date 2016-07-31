@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="Social">
     <template v-for="item in social">
       <div class="Social-icon Icon">
@@ -6,6 +7,7 @@
       </div>
     </template>
   </div>
+</div>
 </template>
 
 <script>
@@ -20,6 +22,7 @@ export default {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding-bottom: 10px;
 }
 

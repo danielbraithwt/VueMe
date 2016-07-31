@@ -5,16 +5,28 @@
             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
               <img class="Profile-Icon" v-bind:src="photo" />
               <h1 class="Profile-Text mFill--width">{{ name }}</h1>
+              <social class="u-sm-hide" :social="social"></social>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="u-overlay Fill--width Fill--height row bottom-xs">
+      <div class="col-xs-12 center-xs ">
+        <img src="../../static/ic_expand_more_white_48px.svg" />
+      </div>
+    </div>
+
+    <!-- <div class="NavBar Fill--width row u-overlay">
+      <a class="NavBar-Item u-textWhite" href="#">About</a>
+      <a class="NavBar-Item u-textWhite" href="#">Work</a>
+    </div> -->
+
     <div class="row Fill--height u-overlay">
       <div class="col-xs-12 bottom-xs center-xs u-flex u-flexWrap u-flexRow">
         <div class="col-xs-12 bottom-xs u-flex u-flexWrap">
-          <social :social="social"></social>
+          <social class="u-xs-hide u-sm-show":social="social"></social>
         </div>
       </div>
     </div>
@@ -34,6 +46,22 @@ export default {
 </script>
 
 <style>
+/*.NavBar {
+  padding: 2em;
+  justify-content: flex-end;
+}
+
+.NavBar-Item {
+  padding-left: 2em;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.NavBar-Item:hover {
+  text-decoration: underline;
+}*/
+
 .u-flex {
   display: flex;
 }

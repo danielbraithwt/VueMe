@@ -186,6 +186,14 @@ body {
   min-height: 0px !important;
 }}*/
 
+.u-xs-hide {
+  display: none;
+}
+
+.u-xs-show {
+  display: block;
+}
+
 .MasonryColumn {
   position: relative;
   -webkit-perspective: 1px;
@@ -201,11 +209,27 @@ body {
   .MasonryColumn {
     column-count: 2;
   }
+
+  .u-sm-hide {
+    display: none;
+  }
+
+  .u-sm-show {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 62em) {
   .MasonryColumn {
     column-count: 3;
+  }
+
+  .u-md-hide {
+    display: none;
+  }
+
+  .u-md-show {
+    display: block;
   }
 }
 
