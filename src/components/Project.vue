@@ -1,4 +1,5 @@
 <template>
+<div>
 <card :image="project.image">
   <h1 slot="top" class="Project-name">{{ project.name }}</h1>
   <div slot="top" class="Project-link col-xs-12 u-p-0">
@@ -10,6 +11,7 @@
 
   <p slot="bottom">{{ project.description }}</p>
 </card>
+</div>
 </template>
 
 <script>

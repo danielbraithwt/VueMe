@@ -1,5 +1,5 @@
 <template>
-<div class="col-xs-12 col-sm-6 col-md-4">
+<div>
   <div class="Card">
     <div class="u-flex u-flexRow u-flexWrap">
       <div class="col-xs-12 u-p-0">

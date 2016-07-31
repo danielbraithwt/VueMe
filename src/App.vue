@@ -185,4 +185,35 @@ body {
   background-color: green;
   min-height: 0px !important;
 }}*/
+
+.MasonryColumn {
+  position: relative;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  column-count: 1;
+}
+
+.MasonryColumn--balanced {
+  column-fill: balance;
+}
+
+@media only screen and (min-width: 48em) {
+  .MasonryColumn {
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .MasonryColumn {
+    column-count: 3;
+  }
+}
+
+.MasonryColumn-Item {
+  position: relative;
+  display: inline-block;
+
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
 </style>

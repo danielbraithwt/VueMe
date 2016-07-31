@@ -1,8 +1,8 @@
 <template>
 <div class="Fill--height">
   <div class="Container">
-    <div class="row">
-      <card :image="about.aboutme.image">
+    <div class="MasonryColumn MasonryColumn--balanced">
+      <card class="col-xs-12 MasonryColumn-Item" :image="about.aboutme.image">
         <h1 slot="top" class="Section-title">About Me</h1>
         <p slot="top" class="Section-subtitle">Subtitle</p>
 
@@ -10,7 +10,7 @@
       </card>
 
 
-      <card :image="about.experence.image">
+      <card class="col-xs-12 MasonryColumn-Item" :image="about.experence.image">
         <h1 slot="top" class="Section-title">Experence</h1>
         <p slot="top" class="Section-subtitle">Subtitle</p>
 
@@ -21,7 +21,7 @@
         </div>
       </card>
 
-      <card :image="about.quallifications.image">
+      <card class="col-xs-12 MasonryColumn-Item" :image="about.quallifications.image">
         <h1 slot="top" class="Section-title">Quallifications</h1>
         <p slot="top" class="Section-subtitle">Subtitle</p>
 
