@@ -1,9 +1,11 @@
 language: node_js
-node-js: "6"
+node_js: "6"
 
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
+    pwd
     cd "$TRAVIS_BUILD_DIR"
+    pwd
     npm run build
     cd dist
     git clone https://danielbraithwt:$GITHUB_API_KEY@github.com/danielbraithwt/danielbraithwt.github.io.git
