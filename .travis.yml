@@ -1,0 +1,14 @@
+after_success: |
+  if [ -n "$GITHUB_API_KEY" ]; then
+    cd "$TRAVIS_BUILD_DIR"
+    npm run build
+    cd dist
+    git clone https://danielbraithwt:$GITHUB_API_KEY@github.com/danielbraithwt/danielbraithwt.github.io.git
+    rm -rfv danielbraithwt.github.io/*
+    cp index.html danielbraithwt.github.io/
+    cp -r static danielbraithwt.github.io/
+    cd danielbraithwt.github.io
+    git add -A ./
+    git -c user.name="travis" -c user.email="travis" commit -m "Auto build"
+    git push -f
+  fi
