@@ -1,5 +1,5 @@
 <template>
-<div class="Fill--height">
+<div>
   <div class="Container">
     <div class="MasonryColumn MasonryColumn--balanced">
       <card class="col-xs-12 MasonryColumn-Item" :image="about.aboutme.image">

@@ -1,6 +1,6 @@
 <template>
 
-<div class="Fill--height u-background">
+<div class="u-background">
   <div class="Container">
     <div class="MasonryColumn MasonryColumn--balanced">
       <template v-for="project in projects">

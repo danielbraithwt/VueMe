@@ -177,15 +177,6 @@ body {
     display: block !important;
 }}
 
-.u-sm-mh-0 {
-  /*background-color: green;*/
-}
-
-/*@media (min-wdith: 767px) {.u-sm-mh-0 {
-  background-color: green;
-  min-height: 0px !important;
-}}*/
-
 .u-xs-hide {
   display: none;
 }
@@ -216,6 +207,10 @@ body {
 
   .u-sm-show {
     display: block;
+  }
+
+  .u-sm-mh-0 {
+    min-height: 0px !important;
   }
 }
 
