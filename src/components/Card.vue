@@ -13,7 +13,7 @@
         <slot name="bottom"></slot>
       </div>
 
-      <div class="col-xs-12 center-xs u-flex u-p-0 u-sm-hidden">
+      <div class="col-xs-12 center-xs u-flex u-p-0 u-sm-hide">
         <div v-on:click="toggleExpanded" v-bind:class="{ 'Card-expand--expanded':expanded }" class="Card-expand">
           <img src="../../static/chevron-down.svg" />
         </div>

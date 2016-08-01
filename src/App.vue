@@ -145,10 +145,6 @@ body {
   background-color: #2196F3;
 }
 
-.u-title {
-  /*font-size: 6vw;*/
-}
-
 .u-textWhite {
   color: white;
 }
@@ -168,14 +164,6 @@ body {
 .u-mB-lg {
   margin-bottom: 20px;
 }
-
-@media (min-width: 767px) {.u-sm-hidden {
-    display: none !important;
-}}
-
-@media (min-width: 767px) {.u-sm-show {
-    display: block !important;
-}}
 
 .u-xs-hide {
   display: none;
@@ -202,11 +190,11 @@ body {
   }
 
   .u-sm-hide {
-    display: none;
+    display: none !important;
   }
 
   .u-sm-show {
-    display: block;
+    display: block !important;
   }
 
   .u-sm-mh-0 {
@@ -220,11 +208,11 @@ body {
   }
 
   .u-md-hide {
-    display: none;
+    display: none !important;
   }
 
   .u-md-show {
-    display: block;
+    display: block !important;
   }
 }
 
