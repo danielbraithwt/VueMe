@@ -24,14 +24,20 @@ export default {
       photo: "../../static/profile-photo.jpg",
       social: [
         {
+          name: 'Github',
+          label: 'Github Link Clicked',
           icon: '../../static/mark-github.svg',
           url: '#',
         },
         {
+          name: 'Email',
+          label: 'Email Link Clicked',
           icon: '../../static/mail.svg',
           url: '#',
         },
         {
+          name: 'Resume',
+          label: 'Resume Link Clicked',
           icon: '../../static/file.svg',
           url: '#',
         }

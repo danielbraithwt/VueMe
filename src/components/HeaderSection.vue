@@ -17,12 +17,7 @@
         <img src="../../static/ic_expand_more_white_48px.svg" />
       </div>
     </div>
-
-    <!-- <div class="NavBar Fill--width row u-overlay">
-      <a class="NavBar-Item u-textWhite" href="#">About</a>
-      <a class="NavBar-Item u-textWhite" href="#">Work</a>
-    </div> -->
-
+    
     <div class="row Fill--height u-overlay">
       <div class="col-xs-12 bottom-xs center-xs u-flex u-flexWrap u-flexRow">
         <div class="col-xs-12 bottom-xs u-flex u-flexWrap">
