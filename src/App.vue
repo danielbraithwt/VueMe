@@ -129,6 +129,14 @@ body {
   padding: 0;
 }
 
+.Title {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 .Fill {
   height: 100%;
   width: 100%;

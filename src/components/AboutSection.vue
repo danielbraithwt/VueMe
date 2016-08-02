@@ -1,6 +1,11 @@
 <template>
 <div>
   <div class="Container">
+    <div class="row">
+      <div class="col-xs-12 center-xs">
+        <h1 class="Title">Me!</h1>
+      </div>
+    </div>
     <div class="MasonryColumn MasonryColumn--balanced">
       <card class="col-xs-12 MasonryColumn-Item" :image="about.aboutme.image">
         <h1 slot="top" class="Card-title">About Me</h1>
