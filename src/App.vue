@@ -70,6 +70,7 @@ export default {
         {
           image: 'http://placehold.it/500x250',
           name: 'Name',
+          subtitle: 'Subtitle',
           url: 'http://website.com',
           git: 'https://github.com/danielbraithwt',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -77,6 +78,7 @@ export default {
         {
           image: 'http://placehold.it/500x250',
           name: 'Name',
+          subtitle: 'Subtitle',
           url: 'http://website.com',
           git: 'https://github.com/danielbraithwt',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -84,6 +86,7 @@ export default {
         {
           image: 'http://placehold.it/500x250',
           name: 'Name',
+          subtitle: 'Subtitle',
           url: 'http://website.com',
           git: 'https://github.com/danielbraithwt',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -105,20 +108,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-}
-
-.Card {
-  height: auto;
-  padding-bottom: 20px;
-
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-bottom: 40px;
-
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  border-radius: 2px;
-  background-color: white;
 }
 
 .Fill {
@@ -229,4 +218,46 @@ body {
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
 }
+
+.Ripple::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+
+  background-color: #E0E0E0;
+
+  margin-left: -60px;
+  margin-top: -60px;
+
+  border-radius: 100%;
+  opacity: 0.6;
+
+  transform: scale(0);
+}
+
+.Ripple:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+.Ripple:active::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
 </style>

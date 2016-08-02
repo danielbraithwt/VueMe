@@ -1,15 +1,13 @@
 <template>
 <div>
 <card :image="project.image">
-  <h1 slot="top" class="Project-name">{{ project.name }}</h1>
-  <div slot="top" class="Project-link col-xs-12 u-p-0">
-    <img class="Project-link-icon" src="../../static/browser.svg" /> <a class="Project-link-text" v-bind:href="project.url">{{ project.url }}</a>
-  </div>
-  <div slot="top" class="Project-link col-xs-12 u-mB-lg u-p-0">
-    <img class="Project-link-icon" src="../../static/mark-github.svg" /> <a class="Project-link-text" v-bind:href="project.git">{{ project.git }}</a>
-  </div>
+  <h1 slot="top" class="Card-title">{{ project.name }}</h1>
+  <p slot="top" class="Card-subtitle">{{ project.subtitle }}<p>
 
   <p slot="bottom">{{ project.description }}</p>
+
+  <a slot="actions" class="Card-action Card-action--primary Ripple" v-bind:href="project.url">Explore</a>
+  <a slot="actions" class="Card-action Ripple" v-bind:href="project.git">Source</a>
 </card>
 </div>
 </template>
@@ -39,20 +37,6 @@ export default {
 </script>
 
 <style>
-.Project-name {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  /*color: white;*/
-
-  padding-left: 20px;
-}
-
-.Project-name h1 {
-  margin-bottom: 0;
-}
-
 .Project-link {
   display: flex;
 

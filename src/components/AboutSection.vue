@@ -3,16 +3,16 @@
   <div class="Container">
     <div class="MasonryColumn MasonryColumn--balanced">
       <card class="col-xs-12 MasonryColumn-Item" :image="about.aboutme.image">
-        <h1 slot="top" class="Section-title">About Me</h1>
-        <p slot="top" class="Section-subtitle">Subtitle</p>
+        <h1 slot="top" class="Card-title">About Me</h1>
+        <p slot="top" class="Card-subtitle">Subtitle</p>
 
         <p slot="bottom">{{ about.aboutme.text }}</p>
       </card>
 
 
       <card class="col-xs-12 MasonryColumn-Item" :image="about.experence.image">
-        <h1 slot="top" class="Section-title">Experence</h1>
-        <p slot="top" class="Section-subtitle">Subtitle</p>
+        <h1 slot="top" class="Card-title">Experence</h1>
+        <p slot="top" class="Card-subtitle">Subtitle</p>
 
         <p slot="bottom">{{ about.experence.text }}</p>
         <div slot="bottom" class="Skills row">
@@ -22,8 +22,8 @@
       </card>
 
       <card class="col-xs-12 MasonryColumn-Item" :image="about.quallifications.image">
-        <h1 slot="top" class="Section-title">Quallifications</h1>
-        <p slot="top" class="Section-subtitle">Subtitle</p>
+        <h1 slot="top" class="Card-title">Quallifications</h1>
+        <p slot="top" class="Card-subtitle">Subtitle</p>
 
         <p slot="bottom">{{ about.quallifications.text }}</p>
       </card>

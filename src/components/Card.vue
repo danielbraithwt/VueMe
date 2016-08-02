@@ -9,14 +9,18 @@
         <slot name="top"></slot>
       </div>
 
-      <div  v-bind:class="{ 'Card-bottom--show':expanded }" class="Card-bottom col-xs-12 u-p-0">
-        <slot name="bottom"></slot>
+      <div class="col-xs-9 u-flex">
+        <slot name="actions"></slot>
       </div>
 
-      <div class="col-xs-12 center-xs u-flex u-p-0 u-sm-hide">
-        <div v-on:click="toggleExpanded" v-bind:class="{ 'Card-expand--expanded':expanded }" class="Card-expand">
+      <div class="col-xs-3 u-flex u-flexJustifyContentCenter u-sm-hide">
+        <div v-on:click="toggleExpanded" v-bind:class="{ 'Card-expand--expanded':expanded }" class="Ripple Card-expand">
           <img src="../../static/chevron-down.svg" />
         </div>
+      </div>
+
+      <div v-bind:class="{ 'Card-bottom--show':expanded }" class="Card-bottom col-xs-12 u-p-0">
+        <slot name="bottom"></slot>
       </div>
     </div>
   </div>
@@ -41,27 +45,54 @@ export default {
 </script>
 
 <style>
+
+.Card {
+  height: auto;
+  padding-bottom: 0.5em;
+
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+  background-color: white;
+}
+
+.Card-title {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.Card-subtitle {
+  padding-left: 20px;
+  color: #757575;
+  margin-top: 0.25em;
+}
+
 .Card--Image {
   width: 100%;
 }
 
 .Card-expand {
+  position: relative;
+
   width: 50px;
   height: 50px;
 
-  margin-bottom: -40px;
+  /*background-color: white;*/
 
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  cursor: pointer;
 
-  border-radius: 50%;
-
-  background-color: white;
+  overflow: hidden;
 
   display: flex;
   justify-content: center;
 }
 
 .Card-expand img {
+  width: 15px;
   transform: rotate(0deg);
   transition: transform 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -86,4 +117,38 @@ export default {
 @media (min-width: 767px) {.Card-bottom {
     max-height: 1000px;
 }}
+
+.Card-action {
+  position: relative;
+  overflow: hidden;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  height: 40px;
+
+  padding-left: 0.5em;
+  margin-left: 0.5em;
+
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+
+  padding-top: 0.25em;
+  margin-top: 0.25em;
+
+  padding-bottom: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+.Card-action--primary {
+  color: #2962FF;
+}
 </style>
