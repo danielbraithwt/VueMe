@@ -44,11 +44,11 @@ export default {
       ],
       about: {
         aboutme: {
-          image: 'http://placehold.it/500x250',
+          image: '../static/About-profile_02.png',
           text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         },
         experence: {
-          image: 'http://placehold.it/500x250',
+          image: '../static/About-work_02.png',
           text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           skills: [
             {
@@ -62,7 +62,7 @@ export default {
           ]
         },
         quallifications: {
-          image: 'http://placehold.it/500x250',
+          image: '../static/About-quall_02.png',
           text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
         }
       },
@@ -98,11 +98,30 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: Roboto;
+  src: url(../static/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../static/fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../static/fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+
 html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   background-color: #F9F9F9;
+
+  font-family: Roboto;
 }
 
 body {
