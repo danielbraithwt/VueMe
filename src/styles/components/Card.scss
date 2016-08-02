@@ -1,0 +1,103 @@
+.Card {
+  height: auto;
+  padding-bottom: 0.5em;
+
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+  background-color: white;
+
+  .Card-title {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .Card-subtitle {
+    padding-left: 20px;
+    color: #757575;
+    margin-top: 0.25em;
+  }
+
+  .Card--Image {
+    width: 100%;
+  }
+
+  .Card-expand {
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .Card-expand img {
+    width: 15px;
+    transform: rotate(0deg);
+    transition: transform 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .Card-expand--expanded img {
+    transform: rotate(180deg);
+  }
+
+  .Card-bottom {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .Card-bottom--show {
+    max-height: 1000px;
+  }
+
+  @media (min-width: 767px) {.Card-bottom {
+      max-height: 1000px;
+  }}
+
+  .Card-action {
+    position: relative;
+    overflow: hidden;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    height: 40px;
+
+    padding-left: 0.5em;
+    margin-left: 0.5em;
+
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+
+    padding-top: 0.25em;
+    margin-top: 0.25em;
+
+    padding-bottom: 0.25em;
+    margin-bottom: 0.25em;
+  }
+
+  .Card-action--primary {
+    color: #2962FF;
+  }
+}

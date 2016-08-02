@@ -1,0 +1,42 @@
+.Skill {
+  display: flex;
+  background-color: lightgrey;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  /* JS */
+  &.Skill--yellow {
+    background-color: #F1BF26;
+  }
+
+  /* Java */
+  &.Skill--red {
+    background-color: #ED1C24;
+  }
+
+  /* SASS */
+  &.Skill--pink {
+    background-color: #C6538C;
+  }
+
+  /* Ember */
+  &.Skill--amber {
+    background-color: #DD6A58;
+  }
+
+  /* Git */
+  &.Skill--brown {
+    background-color: brown;
+  }
+
+  /* Vue */
+  &.Skill--green {
+    background-color: #4FC08D;
+  }
+
+  .Skill-text {
+    font-weight: bold;
+    color: white;
+  }
+}

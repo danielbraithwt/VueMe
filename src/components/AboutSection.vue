@@ -20,7 +20,7 @@
         <p slot="top" class="Card-subtitle">Subtitle</p>
 
         <p slot="bottom">{{ about.experence.text }}</p>
-        <div slot="bottom" class="Skills row">
+        <div slot="bottom" class="row">
           <skill v-for="skill in about.experence.skills"
                   :name="skill.name" :color="skill.color"></skill>
         </div>
@@ -50,26 +50,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.Skills {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.Section-title {
-  padding-left: 20px;
-  margin-bottom: 0;
-}
-
-.Section-subtitle {
-  padding-left: 20px;
-
-  color: #757575;
-}
-
-/*@media (min-wdith: 767px) {.u-sm-mh-0 {
-  background-color: green;
-  min-height: 0px !important;
-}}*/
-</style>

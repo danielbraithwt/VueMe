@@ -35,35 +35,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.Project-link {
-  display: flex;
-
-  padding-top: 5px;
-  padding-left: 20px;
-}
-
-.Project-link-icon {
-  width: 24px;
-  padding-right: 10px;
-}
-
-.Project-link-text {
-
-}
-
-.Project-skills {
-  display: flex;
-  padding-top: 10px;
-}
-
-.Project-description {
-  max-height: 0px;
-  overflow: hidden;
-  transition: max-height 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
-
-  padding-left: 20px;
-  padding-right: 20px;
-}
-</style>

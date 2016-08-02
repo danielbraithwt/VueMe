@@ -1,0 +1,40 @@
+.Ripple::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+
+  background-color: #E0E0E0;
+
+  margin-left: -60px;
+  margin-top: -60px;
+
+  border-radius: 100%;
+  opacity: 0.6;
+
+  transform: scale(0);
+}
+
+.Ripple:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+.Ripple:active::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
