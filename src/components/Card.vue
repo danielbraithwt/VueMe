@@ -13,13 +13,13 @@
         <slot name="actions"></slot>
       </div>
 
-      <div class="col-xs-3 u-flex u-flexJustifyContentCenter u-sm-hide">
+      <div v-if="!alwaysExpanded" class="col-xs-3 u-flex u-flexJustifyContentCenter u-sm-hide">
         <div v-on:click="toggleExpanded" v-bind:class="{ 'Card-expand--expanded':expanded }" class="Ripple Card-expand">
           <img src="../../static/chevron-down.svg" />
         </div>
       </div>
 
-      <div v-bind:class="{ 'Card-bottom--show':expanded }" class="Card-bottom col-xs-12">
+      <div v-bind:class="{ 'Card-bottom--show':(expanded || alwaysExpanded) }" class="Card-bottom col-xs-12">
         <slot name="bottom"></slot>
       </div>
     </div>
@@ -30,7 +30,7 @@
 <script>
 export default {
   name: 'card',
-  props: ['image'],
+  props: ['image', 'alwaysExpanded'],
   data: function() {
     return {
       expanded: false,

@@ -1,6 +1,6 @@
 <template>
 <div>
-<card :image="project.image">
+<card :always-expanded="false" :image="project.image">
   <h1 slot="top" class="Card-title">{{ project.name }}</h1>
   <p slot="top" class="Card-subtitle">{{ project.subtitle }}<p>
 

@@ -7,7 +7,8 @@
       </div>
     </div>
     <div class="MasonryColumn MasonryColumn--balanced">
-      <card class="col-xs-12 MasonryColumn-Item" :image="about.aboutme.image">
+      <card class="col-xs-12 MasonryColumn-Item" :always-expanded="true"
+                                                 :image="about.aboutme.image">
         <h1 slot="top" class="Card-title">About Me</h1>
         <p slot="top" class="Card-subtitle">Subtitle</p>
 
@@ -15,7 +16,8 @@
       </card>
 
 
-      <card class="col-xs-12 MasonryColumn-Item" :image="about.experence.image">
+      <card class="col-xs-12 MasonryColumn-Item" :always-expanded="true"
+                                                 :image="about.experence.image">
         <h1 slot="top" class="Card-title">Experence</h1>
         <p slot="top" class="Card-subtitle">Subtitle</p>
 
@@ -26,7 +28,8 @@
         </div>
       </card>
 
-      <card class="col-xs-12 MasonryColumn-Item" :image="about.quallifications.image">
+      <card class="col-xs-12 MasonryColumn-Item" :always-expanded="true"
+                                                 :image="about.quallifications.image">
         <h1 slot="top" class="Card-title">Quallifications</h1>
         <p slot="top" class="Card-subtitle">Subtitle</p>
 
