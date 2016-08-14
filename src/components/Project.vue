@@ -6,8 +6,8 @@
 
   <p slot="bottom">{{ project.description }}</p>
 
-  <a slot="actions" class="Card-action Card-action--primary Ripple" v-bind:href="project.url">Explore</a>
-  <a slot="actions" class="Card-action Ripple" v-bind:href="project.git">Source</a>
+  <a v-if="project.url" slot="actions" class="Card-action Card-action--primary Ripple" v-bind:href="project.url">Explore</a>
+  <a v-if="project.git" slot="actions" class="Card-action Ripple" v-bind:href="project.git">Source</a>
 </card>
 </div>
 </template>
