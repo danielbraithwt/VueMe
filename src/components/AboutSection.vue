@@ -10,7 +10,7 @@
       <card class="col-xs-12 MasonryColumn-Item" :always-expanded="true"
                                                  :image="about.aboutme.image">
         <h1 slot="top" class="Card-title">About Me</h1>
-        <p slot="top" class="Card-subtitle">Subtitle</p>
+        <p slot="top" class="Card-subtitle">{{ about.aboutme.subtitle }}</p>
 
         <p slot="bottom">{{ about.aboutme.text }}</p>
       </card>
@@ -19,7 +19,7 @@
       <card class="col-xs-12 MasonryColumn-Item" :always-expanded="true"
                                                  :image="about.experence.image">
         <h1 slot="top" class="Card-title">Experence</h1>
-        <p slot="top" class="Card-subtitle">Subtitle</p>
+        <p slot="top" class="Card-subtitle">{{ about.experence.subtitle }}</p>
 
         <p slot="bottom">{{ about.experence.text }}</p>
         <div slot="bottom" class="row">
@@ -29,9 +29,17 @@
       </card>
 
       <card class="col-xs-12 MasonryColumn-Item" :always-expanded="true"
+                                                 :image="about.interests.image">
+        <h1 slot="top" class="Card-title">Interests</h1>
+        <p slot="top" class="Card-subtitle">{{ about.interests.subtitle }}</p>
+
+        <p slot="bottom">{{ about.interests.text }}</p>
+      </card>
+
+      <card class="col-xs-12 MasonryColumn-Item" :always-expanded="true"
                                                  :image="about.quallifications.image">
         <h1 slot="top" class="Card-title">Quallifications</h1>
-        <p slot="top" class="Card-subtitle">Subtitle</p>
+        <p slot="top" class="Card-subtitle">{{ about.quallifications.subtitle }}</p>
 
         <p slot="bottom">{{ about.quallifications.text }}</p>
       </card>
