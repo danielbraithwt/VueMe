@@ -42,7 +42,7 @@ export default {
           name: 'Resume',
           label: 'Resume Link Clicked',
           icon: '../../static/file.svg',
-          url: '#',
+          url: '../static/Resume.pdf',
         }
       ],
       about: {
