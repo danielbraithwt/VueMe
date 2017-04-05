@@ -10,15 +10,14 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="u-overlay Fill--width Fill--height row bottom-xs">
+    <div class="u-overlay-bottom Fill--width row bottom-xs">
       <div class="col-xs-12 center-xs ">
         <img src="../../static/ic_expand_more_white_48px.svg" />
       </div>
     </div>
 
-    <div class="row Fill--height u-overlay">
+    <div class="row u-overlay-bottom">
       <div class="col-xs-12 bottom-xs center-xs u-flex u-flexWrap u-flexRow">
         <div class="col-xs-12 bottom-xs u-flex u-flexWrap">
           <social class="u-xs-hide u-sm-show":social="social"></social>
