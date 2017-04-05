@@ -47,6 +47,42 @@
       for (var i = 0; i < divs.length; i++) {
         divs[i].style.minHeight = height + 'px';
       }
+
+      // Set heights on balanced columns as chrome dosnt support
+      // columm-fill
+      var balanced = document.getElementsByClassName('MasonryColumn--balanced')
+      for (var i = 0; i < balanced.length; i++) {
+        // Get the heights of items
+        var col = balanced[i];
+        var items = col.getElementsByClassName('MasonryColumn-Item');
+        var numColumns = parseInt(window.getComputedStyle(col).columnCount);
+        var itemsPerColumn = parseFloat(items.length)/parseFloat(numColumns)
+        var columnHeights = new Array(numColumns);
+
+        var columnNumber = 0;
+        columnHeights[0] = 0;
+        for (var j = 0, k = 0; j < items.length; j++, k++) {
+          columnHeights[columnNumber] += items[j].offsetHeight;
+
+          var itemsRemaining = (items.length - j) - 1;
+          var columnsRemaining = (numColumns - columnNumber) - 1;
+          if (itemsRemaining <= columnsRemaining || k === Math.ceil(itemsPerColumn) - 1) {
+            k = -1;
+            columnNumber++;
+            columnHeights[columnNumber] = 0
+          }
+        }
+
+        var maxHeight = 0;
+        for (var j = 0; j < columnHeights.length; j++) {
+          if (columnHeights[j] > maxHeight) {
+            maxHeight = columnHeights[j];
+          }
+        }
+        console.log(maxHeight);
+
+        col.style.height = maxHeight + 'px'
+      }
     }
 
     window.onload = resizeDivs;
