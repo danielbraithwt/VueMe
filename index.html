@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Cache-control" content="public">
     <title>Daniel Braithwaite</title>
     <link rel="stylesheet" href="static/flexboxgrid.min.css">
 
@@ -29,7 +30,7 @@
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
 
-    <script>
+    <script async>
     // Using vh is not a good solution as on mobile can cause jumping
     // so temparly use vh on site load and then change height to px using js
     var width = -1;
@@ -79,7 +80,7 @@
             maxHeight = columnHeights[j];
           }
         }
-        
+
         col.style.height = maxHeight + 'px'
       }
     }
