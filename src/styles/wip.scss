@@ -1,3 +1,20 @@
+@keyframes BounceUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+
+.Animate-updown {
+  animation: BounceUpDown 1s linear infinite
+}
+
 .Title {
   font-weight: bold;
   text-transform: capitalize;

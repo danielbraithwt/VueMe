@@ -13,7 +13,7 @@
 
     <div class="u-overlay-bottom Fill--width row bottom-xs">
       <div class="col-xs-12 center-xs ">
-        <img src="../../static/ic_expand_more_white_48px.svg" />
+        <img class="Animate-updown" src="../../static/ic_expand_more_white_48px.svg" />
       </div>
     </div>
 
