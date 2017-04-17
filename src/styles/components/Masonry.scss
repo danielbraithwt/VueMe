@@ -3,10 +3,12 @@
   -webkit-perspective: 1px;
   perspective: 1px;
   column-count: 1;
+  column-width: auto;
 }
 
 .MasonryColumn--balanced {
-  column-fill: balance;
+  // column-fill: balance;
+  -moz-column-fill: balance;
 }
 
 @media only screen and (min-width: 48em) {

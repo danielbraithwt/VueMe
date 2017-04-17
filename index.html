@@ -30,7 +30,8 @@
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
 
-    <script async>
+    <script src="static/modernizr.min.js"></script>
+    <script>
     // Using vh is not a good solution as on mobile can cause jumping
     // so temparly use vh on site load and then change height to px using js
     var width = -1;
@@ -47,6 +48,10 @@
 
       for (var i = 0; i < divs.length; i++) {
         divs[i].style.minHeight = height + 'px';
+      }
+
+      if (Modernizr.testProp('-moz-column-fill', 'balance')) {
+        return
       }
 
       // Set heights on balanced columns as chrome dosnt support
