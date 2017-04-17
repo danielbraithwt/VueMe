@@ -18,7 +18,7 @@
 
       <card class="col-xs-12 MasonryColumn-Item" :always-expanded="true"
                                                  :image="about.experence.image">
-        <h1 slot="top" class="Card-title">Experence</h1>
+        <h1 slot="top" class="Card-title">Experience</h1>
         <p slot="top" class="Card-subtitle">{{ about.experence.subtitle }}</p>
 
         <p slot="bottom">{{ about.experence.text }}</p>

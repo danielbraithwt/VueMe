@@ -88,7 +88,7 @@ export default {
           // image: 'http://placehold.it/500x250',
           name: 'Large NZ Eftpos Retailer',
           subtitle: 'Alphero',
-          description: "For this website we used Webhook CMS to load our content and then plain JS and SASS. This was one of my favorite projects to have worked on as it was the first industry project I was able to take from start to finish (mostly the summer was over before the site went live).",
+          description: "For this website we used Webhook CMS to load our content and then plain JS and SASS. This was one of my favorite projects to have worked on as it was the first industry project I was able to take from start to finish.",
         },
         {
           // image: 'http://placehold.it/500x250',
@@ -100,7 +100,7 @@ export default {
           // image: 'http://placehold.it/500x250',
           name: 'VueMe',
           subtitle: 'Personal',
-          url: 'danielbraithwaite.name',
+          // url: 'danielbraithwaite.name',
           git: 'https://github.com/danielbraithwt/VueMe',
           description: "After learning so much at Alphero I wanted a way to apply what I had learnt and remaking my personal website seemed like a natural way to apply these skills. The JS frameworks I already had experience with didn't seem like a good fit so this was an opportunity to learn a new front end framework. I chose Vue because of its simplicity, which was good because there wasn't a huge learning curve for the framework, Also Vue is much less opinionated than other frameworks allowing me to structure the project how I wanted.",
         },
